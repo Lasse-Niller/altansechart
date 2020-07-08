@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" />
+        <title>Udviklingen af søgninger på Altan + Afskærmning</title>
+        <!-- import plugin script -->
+       <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    </head>
+    <body>
+
+    	<header>
+    		<img src="https://www.altan.dk/wp-content/themes/altan/assets/img/logo-orange.svg">
+    	</header>
+
+<section>
+	
+<article class="beforechart">
+	
+	<p class="strong">Her skal der skrives lidt tekst af Simone der fortæller om tankerne bag</p>
+
+	Danskerne tog virkelig afstandsbegrebet til sig under Coronakrisen, som også viste sig i søgemønsteret på Google.
+	Herunder har vi kigget i data på søgninger omkring altan + afskærmning i vores data hos AltanDK. De nedenstående grafer viser et indeks og de faktiske søgevolumens som Altan bliver ramt af på denne kombination.
+</article>
+
+
+</section>
+
+<section>
+
+	<article>
+		Indeks fra Juli 19 (indeks 100):
+	</article>
+
+</section>
+
+<div id="chart">
+    	</div>
+
+    	<script>
+         var options = {
+          series: [{
+          name: "Søgninger på Altan + afskærmning",
+          data: [100,68.75,68.75,125,205.25,143.75,806.25,718.25,5693.75,51312.5,35487.5,26606.25]
+        }],
+          chart: {
+          type: 'area',
+          height: 350,
+          zoom: {
+            enabled: false
+          }
+        },
+        dataLabels: {
+          enabled: true
+        },
+        stroke: {
+          curve: 'straight'
+        },
+        
+        title: {
+          text: 'Søgninger på Altan & afskærmning i Google',
+          align: 'left'
+        },
+        subtitle: {
+          text: 'Index (Juli 2019 = indeks 100)',
+          align: 'left'
+        },
+        xaxis: {
+          categories: ["Jul","Feb","Mar","Apr","Maj","Juni","Juli", "Aug","Sep","Okt","Nov","Dec"]
+        },
+        yaxis: {
+          opposite: true
+        },
+        legend: {
+          horizontalAlign: 'left'
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+      </script>
+
+      <section>
+
+	<article>
+		Baseret på data fra Altan.dk's Search Console:
+	</article>
+
+</section>
+
+<div id="chart2">
+    	</div>
+
+    	<script>
+         var options = {
+          series: [{
+          name: "Søgninger på Altan + afskærmning",
+          data: [16,11,11,20,33,23,129,115,911,8210,5678,4257]
+        }],
+          chart: {
+          type: 'area',
+          height: 350,
+          zoom: {
+            enabled: false
+          }
+        },
+        dataLabels: {
+          enabled: true
+        },
+        stroke: {
+          curve: 'straight'
+        },
+        
+        title: {
+          text: 'Søgninger på Altan & afskærmning i Google',
+          align: 'left'
+        },
+        subtitle: {
+          text: 'Faktisk impressions',
+          align: 'left'
+        },
+        xaxis: {
+          categories: ["Jul","Aug","Sep","Okt","Nov","Dec","Jan", "Feb","Mar","Apr","Maj","Juni"]
+        },
+        yaxis: {
+          opposite: true
+        },
+        legend: {
+          horizontalAlign: 'left'
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart2"), options);
+        chart.render();
+      </script>
+    
+      
+    </body>
+</html>
+<footer>
+<section class="kilder">
+<p>Lavet af: Altan.dk - <a href="https://www.altan.dk/altaner">Altan</a> og <a href="https://www.altan.dk/elevatorer">Elevator</a> til det gode liv i byen</a></p>
+<p>Til fri benyttelse, hvis kilden henvises</p>	
+
+Kilder til data:
+
+Google Search Console, Altan.dk (Juli 2019 - Juni 2020)
+</section>
+</footer>
+<style type="text/css">
+
+@font-face { font-family: 'Lato'; font-style: normal; font-weight: 100; src: url('../charts/fonts/lato-v16-latin-100.eot'); src: local('Lato Hairline'), local('Lato-Hairline'), url('../charts/fonts/lato-v16-latin-100.eot?#iefix') format('embedded-opentype'), url('../fonts/lato-v16-latin-100.woff2') format('woff2'), url('../charts/fonts/lato-v16-latin-100.woff') format('woff'), url('../charts/fonts/lato-v16-latin-100.ttf') format('truetype'), url('../charts/fonts/lato-v16-latin-100.svg#Lato') format('svg'); }
+
+html {
+
+	font-family: "Lato",Arial;
+	font-size: 16px;
+}
+article.beforechart {
+    padding: 50px;
+    text-align: center;
+}
+
+header img {
+    margin: auto;
+    display: block;
+}
+
+article.beforechart {
+    padding: 50px;
+    text-align: center;
+    font-size: 1em;
+    max-width: 33rem;
+    display: block;
+    line-height: 1.65;
+    margin: auto;
+    text-align: -webkit-auto;
+    vertical-align: baseline;
+}
+
+p.strong {
+
+	font-weight: 800;
+}
+
+</style>
